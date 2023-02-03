@@ -43,7 +43,7 @@ export default function Example() {
           `Bearer ${YOUR_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "text-davinci-003",
+        model: 'text-davinci-003',
         prompt: value,
         max_tokens: MAX_TOKENS,
         temperature: 0,
