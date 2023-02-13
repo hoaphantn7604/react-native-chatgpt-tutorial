@@ -12,6 +12,10 @@ export default function Example() {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
+    firstMessage();
+  }, []);
+
+  const firstMessage = () =>{
     setMessages([
       {
         _id: 1,
@@ -19,12 +23,12 @@ export default function Example() {
         createdAt: new Date(),
         user: {
           _id: 2,
-          name: 'React Native',
+          name: 'Chatbot GPT',
           avatar: logo,
         },
       },
     ]);
-  }, []);
+  };
 
   const onSend = useCallback((messages = []) => {
     setMessages(previousMessages =>
@@ -66,7 +70,7 @@ export default function Example() {
       createdAt: new Date(),
       user: {
         _id: 2,
-        name: 'React Native',
+        name: 'Chatbot GPT',
         avatar: logo,
       },
     };
